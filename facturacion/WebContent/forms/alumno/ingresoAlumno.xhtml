@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      template="/WEB-INF/facelets/templates/default.xhtml">
+	<ui:define name="title">CTP</ui:define>
+	<ui:define name="content">
+		<f:view>
+		  <h:form>
+		      <h:messages/>
+		      <h:panelGrid columns="3" style="height: 100%">
+		          
+		          <h:outputLabel value="Nombre del Alumno" for="nombreAlumno"/>
+					<h:inputText id="nombreAlumno"
+						value="#{alumnoBean.alumno.nombreAlumno}" maxlength="25"/>
+					<h:message for="nombreAlumno"/>
+		          
+		          <h:outputLabel value="Apellido del Alumno" for="apellidoAlumno"/>
+					<h:inputText id="apellidoAlumno"
+						value="#{alumnoBean.alumno.apellidoAlumno}" maxlength="25"/>
+					<h:message for="apellidoAlumno"/>
+		          
+		          <h:outputLabel value="NIT del Alumno" for="nitAlumno"/>
+		          <h:inputText id="nitAlumno" value="#{alumnoBean.alumno.nitAlumno}" maxlength="17"/>
+		          <h:message for="nitAlumno"/>
+		          
+		          <h:outputLabel value="DUI del Alumno" for="duiAlumno"/>
+		          <h:inputText id="duiAlumno" value="#{alumnoBean.alumno.duiAlumno}" maxlength="10"/>
+		          <h:message for="duiAlumno"/>
+		          
+                  
+                  <f:facet name="footer">
+                    <h:panelGrid columns="6">
+                        
+                        <h:outputText value=" " />
+                        
+                        <h:outputText value=" " />
+							<h:commandButton action="#{alumnoBean.validarAlumno}"  value="Ingresar"
+								styleClass="btn" id="botonIngresar" />
+							
+                    </h:panelGrid>
+                  </f:facet>
+		      </h:panelGrid>
+		  </h:form>
+		</f:view>
+	</ui:define>
+</ui:composition>

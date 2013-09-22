@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<head><title> Guest Number</title></head>
+<body> 
+<f:view>
+<h:form>
+<h:panelGrid rows="3">
+<f:facet name="header">
+<h:outputLabel value="range 1-100"/>
+</f:facet>
+<h:outputLabel value="Number" />
+<h:inputText value="#{login.number}" />
+
+<h:commandButton value="submit" action="#{login.obtenerNumero(login.number)}"/>
+
+<h:outputLabel value="#{login.obtenerNumero(login.number)}" />
+</h:panelGrid>
+</h:form>
+</f:view>
+</body> 
+</html>

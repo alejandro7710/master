@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      template="/WEB-INF/facelets/templates/default.xhtml">
+	<ui:define name="title">Empleado</ui:define>
+	<ui:define name="content">
+		<f:view>
+		  <h:form>
+		      <h:messages />
+		      <h:panelGrid columns="3">
+		          
+		          <h:outputLabel value="Nombres" for="nombres"/>
+		          <h:inputText id="nombres" value="#{empleadoBean.empleado.nombres}" />
+		          <h:message for="nombres"/>
+		          
+		          <h:outputLabel value="Apellidos" for="apellidos"/>
+                  <h:inputText id="apellidos" value="#{empleadoBean.empleado.apellidos}" />
+                  <h:message for="apellidos"/>
+                  
+                  <h:outputText value="Sexo" for="sexo"/>
+                  <h:selectOneMenu id="sexo" value="#{empleadoBean.empleado.sexo}">
+                    <f:selectItem itemLabel="Masculino" itemValue="M"/>
+                    <f:selectItem itemLabel="Femenino" itemValue="F"/>
+                  </h:selectOneMenu>
+                  <h:message for="sexo"/>
+                  
+                  <f:facet name="footer">
+                    <h:panelGrid columns="6">
+                        <h:commandButton action="#{empleadoBean.save}" value="Crear" styleClass="btn #{(empty empleadoBean.empleado.codigo)?'btn-primary':''}"/>
+                        <h:outputText value=" " />
+                        <h:commandButton action="#{empleadoBean.update}" value="Actualizar" styleClass="btn #{(not empty empleadoBean.empleado.codigo)?'btn-primary':''}"/>
+                        <h:outputText value=" " />
+                        <h:commandButton action="empleadoLista" value="Regresar" styleClass="btn" />
+                        <h:inputHidden value="#{empleadoBean.empleado.codigo}" />
+                    </h:panelGrid>
+                  </f:facet>
+		      </h:panelGrid>
+		  </h:form>
+		</f:view>
+	</ui:define>
+</ui:composition>

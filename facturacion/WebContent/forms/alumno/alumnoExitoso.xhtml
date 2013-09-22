@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      template="/WEB-INF/facelets/templates/default.xhtml">
+	<ui:define name="title">CTP</ui:define>
+	<ui:define name="content">
+		<f:view>
+		  <h:form>
+		  <h:outputText value="ALUMNO INGRESADO CON EXITO"/>
+		  
+		      <h:panelGrid columns="3">
+		      	<h:outputLabel value="Carnet"/>
+		      	<h:outputLabel></h:outputLabel>
+				<h:outputLabel id="carnet" value="#{alumnoBean.alumno.carnet}"/>
+				
+				<h:outputLabel value="Nombre del Alumno"/>
+		      	<h:outputLabel></h:outputLabel>
+				<h:outputLabel id="nombreAlumno" value="#{alumnoBean.alumno.nombreAlumno}"/>
+				
+				<h:outputLabel value="Apellido del Alumno"/>
+		      	<h:outputLabel></h:outputLabel>
+				<h:outputLabel id="apellidoAlumno" value="#{alumnoBean.alumno.apellidoAlumno}"/>
+				
+				<h:outputLabel value="NIT"/>
+		      	<h:outputLabel></h:outputLabel>
+				<h:outputLabel id="nitAlumno" value="#{alumnoBean.alumno.nitAlumno}"/>
+				
+				<h:outputLabel value="DUI"/>
+		      	<h:outputLabel></h:outputLabel>
+				<h:outputLabel id="duiAlumno" value="#{alumnoBean.alumno.duiAlumno}"/>
+				
+				                  <f:facet name="footer">
+                    <h:panelGrid columns="6">
+                        
+                        <h:outputText value=" " />
+                        
+                        <h:outputText value=" " />
+							<h:commandButton action="ingresoAlumno"  value="Volver"
+								styleClass="btn" id="botonVolver" />
+							
+                    </h:panelGrid>
+                  </f:facet>
+				
+								      
+		      </h:panelGrid>		      
+		      
+		  </h:form>
+		</f:view>
+	</ui:define>
+</ui:composition>

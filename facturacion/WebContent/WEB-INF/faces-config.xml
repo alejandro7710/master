@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xi="http://www.w3.org/2001/XInclude"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+ <managed-bean>
+  <managed-bean-name>login</managed-bean-name>
+  <managed-bean-class>com.dsi.capa.bean.Login</managed-bean-class>
+  <managed-bean-scope>session</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>clienteBean</managed-bean-name>
+  <managed-bean-class>com.dsi.capa.bean.ClienteBean</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>empleadoBean</managed-bean-name>
+  <managed-bean-class>com.dsi.capa.bean.EmpleadoBean</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+ 	<managed-bean-name>usuarioBean</managed-bean-name>
+ 	<managed-bean-class>com.dsi.capa.bean.UsuarioBean</managed-bean-class>
+ 	<managed-bean-scope>session</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+ 	<managed-bean-name>alumnoBean</managed-bean-name>
+ 	<managed-bean-class>com.dsi.capa.bean.AlumnoBean</managed-bean-class>
+ 	<managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ 
+ 
+ <navigation-rule>
+  
+  
+  <navigation-case>
+   <from-outcome>exito</from-outcome>
+   <to-view-id>/page2.xhtml</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>empleado</from-outcome>
+   <to-view-id>/forms/empleado/empleado.xhtml</to-view-id>
+   </navigation-case>
+   
+   
+   <navigation-case>
+   <from-outcome>ok</from-outcome>
+   <to-view-id>/forms/alumno/alumno.xhtml</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>fallo</from-outcome>
+   <to-view-id>/forms/alumno/alumno.xhtml</to-view-id>
+  </navigation-case>
+
+
+
+<!-- NAVEGACION LUIS -->
+
+<navigation-case>
+	<from-outcome>ingresoAlumno</from-outcome>
+	<to-view-id>/forms/alumno/ingresoAlumno.xhtml</to-view-id>
+</navigation-case>
+  
+<navigation-case>
+	<from-outcome>alumnoExitoso</from-outcome>
+	<to-view-id>/forms/alumno/alumnoExitoso.xhtml</to-view-id>
+</navigation-case>
+
+<navigation-case>
+	<from-outcome>actualizaAlumno</from-outcome>
+	<to-view-id>/forms/alumno/actualizaAlumno.xhtml</to-view-id>
+</navigation-case>
+
+<navigation-case>
+	<from-outcome>eliminaAlumno</from-outcome>
+	<to-view-id>/forms/alumno/eliminaAlumno.xhtml</to-view-id>
+</navigation-case>
+
+<!-- FIN NAVEGACION LUIS -->
+  
+</navigation-rule> 
+  
+ 
+ <application>
+  <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+ </application>
+</faces-config>

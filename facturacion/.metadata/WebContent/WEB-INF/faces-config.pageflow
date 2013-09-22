@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13757495272510" configfile="/facturacion/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="1234" id="pf13794733982470" outlinks="pf13797400832440 pf13797400832441 pf13797400832443 pf13797400832444 pf13797400832445 pf13797400832446 pf137974109477115 pf137974116337217" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="page2.xhtml" x="338" y="562" id="pf13797400832448" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf13797400832440" path="/page2.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="forms/empleado/empleado.xhtml" x="338" y="946" id="pf13797400832449" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf13797400832441" path="/forms/empleado/empleado.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="forms/alumno/ingresoAlumno.xhtml" x="338" y="1330" id="pf137974008324410" referenceLink="//@navigationRule.0/@navigationCase.4/@toViewId|" inlinks="pf13797400832443" path="/forms/alumno/ingresoAlumno.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="forms/alumno/alumnoExitoso.xhtml" x="338" y="1714" id="pf137974008324411" referenceLink="//@navigationRule.0/@navigationCase.5/@toViewId|" inlinks="pf13797400832444" path="/forms/alumno/alumnoExitoso.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="forms/alumno/actualizaAlumno.xhtml" x="338" y="2098" id="pf137974008324412" referenceLink="//@navigationRule.0/@navigationCase.6/@toViewId|" inlinks="pf13797400832445" path="/forms/alumno/actualizaAlumno.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="forms/alumno/eliminaAlumno.xhtml" x="338" y="2482" id="pf137974008324413" referenceLink="//@navigationRule.0/@navigationCase.7/@toViewId|" inlinks="pf13797400832446" path="/forms/alumno/eliminaAlumno.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="forms/alumno/alumno.xhtml" id="pf137974109477216" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf137974109477115 pf137974116337217" path="/forms/alumno/alumno.xhtml"/>
+  <links id="pf13797400832440" target="pf13797400832448" source="pf13794733982470" outcome="exito"/>
+  <links id="pf13797400832441" target="pf13797400832449" source="pf13794733982470" outcome="empleado"/>
+  <links id="pf13797400832443" target="pf137974008324410" source="pf13794733982470" outcome="ingresoAlumno"/>
+  <links id="pf13797400832444" target="pf137974008324411" source="pf13794733982470" outcome="alumnoExitoso"/>
+  <links id="pf13797400832445" target="pf137974008324412" source="pf13794733982470" outcome="actualizaAlumno"/>
+  <links id="pf13797400832446" target="pf137974008324413" source="pf13794733982470" outcome="eliminaAlumno"/>
+  <links id="pf137974109477115" target="pf137974109477216" source="pf13794733982470" outcome="ok"/>
+  <links id="pf137974116337217" target="pf137974109477216" source="pf13794733982470" outcome="fallo"/>
+</pageflow:Pageflow>

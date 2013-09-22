@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#login.xhtml" PATH="/login.xhtml"
+  SHAPE="157,84,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#page2.xhtml" PATH="/page2.xhtml"
+  SHAPE="384,88,50,25" model-entity="JSFProcessGroup" persistent="true"/>
+ <PROCESS-ITEM NAME="rules:#forms#empleado#empleado.xhtml"
+  PATH="/forms/empleado/empleado.xhtml" SHAPE="272,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="fallo::#login.xhtml" NAME="output"
+    PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="fallo" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="exito::#page2.xhtml" NAME="output1"
+    PATH="/page2.xhtml" TARGET="rules:#page2.xhtml" TITLE="exito" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="empleado::#forms#empleado#empleado.xhtml"
+    NAME="output2" PATH="/forms/empleado/empleado.xhtml"
+    TARGET="rules:#forms#empleado#empleado.xhtml" TITLE="empleado" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>
